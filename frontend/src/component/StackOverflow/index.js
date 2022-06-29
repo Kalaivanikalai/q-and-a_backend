@@ -9,7 +9,7 @@ function Index() {
 
   useEffect(() => {
     async function getQuestion() {
-      await axios.get("https://stackoverflow-clone-hackathon.herokuapp.com/api/question").then((res) => {
+      await axios.get("https://get-your-qanda.herokuapp.com/api/question").then((res) => {
         setQuestions(res.data.reverse());
         // console.log(res.data)
       });

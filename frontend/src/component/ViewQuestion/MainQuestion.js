@@ -29,7 +29,7 @@ function MainQuestion() {
   useEffect(() => {
     async function getFunctionDetails() {
       await axios
-        .get(`https://stackoverflow-clone-hackathon.herokuapp.com/api/question/${id}`)
+        .get(`https://get-your-qanda.herokuapp.com/api/question/${id}`)
         .then((res) => setQuestionData(res.data[0]))
         .catch((err) => console.log(err));
     }
@@ -38,7 +38,7 @@ function MainQuestion() {
 
   async function getUpdatedAnswer() {
     await axios
-      .get(`https://stackoverflow-clone-hackathon.herokuapp.com/api/question/${id}`)
+      .get(`https://get-your-qanda.herokuapp.com/api/question/${id}`)
       .then((res) => setQuestionData(res.data[0]))
       .catch((err) => console.log(err));
   }
@@ -57,7 +57,7 @@ function MainQuestion() {
     };
 
     await axios
-      .post("https://stackoverflow-clone-hackathon.herokuapp.com/api/answer", body, config)
+      .post("https://get-your-qanda.herokuapp.com/api/answer", body, config)
       .then(() => {
         alert("Answer added successfully");
         setAnswer("");
@@ -73,7 +73,7 @@ function MainQuestion() {
         comment: comment,
         user: user,
       };
-      await axios.post(`https://stackoverflow-clone-hackathon.herokuapp.com/api/comment/${id}`, body).then((res) => {
+      await axios.post(`https://get-your-qanda.herokuapp.com/api/comment/${id}`, body).then((res) => {
         setComment("");
         setShow(false);
         getUpdatedAnswer();

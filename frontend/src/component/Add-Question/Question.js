@@ -36,7 +36,7 @@ const [loading,setLoading]=useState(false);
                 user:user,
             };
             await axios
-            .post("https://stackoverflow-clone-hackathon.herokuapp.com/api/question", bodyJSON)
+            .post("https://get-your-qanda.herokuapp.com/api/question", bodyJSON)
             .then((res) => {
                 alert("Question added successfully")
                 setLoading(false)

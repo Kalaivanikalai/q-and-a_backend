@@ -6,7 +6,7 @@ const commentRouter = require('./Comment')
 
 
 router.get('/',(req,res)=>{
-    res.send('welcome to stackoverflow clone');
+    res.send('Q & A');
 });
 
 router.use('/question',questionRouter);
